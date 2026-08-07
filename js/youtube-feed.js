@@ -1,6 +1,6 @@
 /**
  * YouTube Feed Integration for O Sopro de Sophia
- * Fetches latest videos from the channel RSS feed and renders them as embed cards.
+ * Fetches latest videos from the channel RSS feed and renders them as cards.
  */
 (function () {
   'use strict';
@@ -29,7 +29,11 @@
         const proxyUrl = proxyFn(url);
         const res = await fetch(proxyUrl);
         if (res.ok) {
-          return await res.text();
+          const text = await res.text();
+          // Verify we got XML, not an error page
+          if (text.includes('<feed') && text.includes('<entry')) {
+            return text;
+          }
         }
       } catch (e) {
         // try next proxy
@@ -40,34 +44,55 @@
 
   /**
    * Parse RSS XML and extract video entries
+   * Uses getElementsByTagName which handles XML namespaces properly
    */
   function parseRSS(xmlText) {
     const parser = new DOMParser();
     const doc = parser.parseFromString(xmlText, 'application/xml');
-    const entries = doc.querySelectorAll('entry');
+
+    // Check for parse errors
+    if (doc.querySelector('parsererror')) {
+      console.warn('YouTube RSS: XML parse error');
+      return [];
+    }
+
+    // getElementsByTagName works with namespaced elements
+    const entries = doc.getElementsByTagName('entry');
     const videos = [];
 
-    entries.forEach((entry, i) => {
-      if (i >= MAX_VIDEOS) return;
+    for (let i = 0; i < Math.min(entries.length, MAX_VIDEOS); i++) {
+      const entry = entries[i];
 
-      const videoId =
-        entry.querySelector('videoId')?.textContent ||
-        entry.querySelector('id')?.textContent?.replace('yt:video:', '') ||
-        '';
+      // Extract videoId (yt:videoId)
+      const videoIdEl = entry.getElementsByTagName('yt:videoId')[0];
+      let videoId = videoIdEl ? videoIdEl.textContent : '';
 
-      const title = entry.querySelector('title')?.textContent || '';
+      // Fallback: extract from <id> tag
+      if (!videoId) {
+        const idEl = entry.getElementsByTagName('id')[0];
+        if (idEl) {
+          videoId = idEl.textContent.replace('yt:video:', '');
+        }
+      }
 
-      const published = entry.querySelector('published')?.textContent || '';
+      if (!videoId) continue;
 
-      const thumbnail =
-        entry.querySelector('thumbnail')?.getAttribute('url') ||
-        `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
+      // Extract title
+      const titleEl = entry.getElementsByTagName('title')[0];
+      const title = titleEl ? titleEl.textContent : '';
 
-      const description =
-        entry.querySelector('description')?.textContent || '';
+      // Extract published date
+      const pubEl = entry.getElementsByTagName('published')[0];
+      const published = pubEl ? pubEl.textContent : '';
 
-      videos.push({ videoId, title, published, thumbnail, description });
-    });
+      // Extract thumbnail (media:thumbnail)
+      const thumbEl = entry.getElementsByTagName('media:thumbnail')[0];
+      const thumbnail = thumbEl
+        ? thumbEl.getAttribute('url')
+        : `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
+
+      videos.push({ videoId, title, published, thumbnail });
+    }
 
     return videos;
   }
@@ -96,7 +121,7 @@
     card.className = 'yt-video-card';
 
     card.innerHTML = `
-      <div class="yt-video-thumb" data-video-id="${video.videoId}">
+      <a href="https://www.youtube.com/watch?v=${video.videoId}" target="_blank" rel="noopener" class="yt-video-thumb">
         <img src="${video.thumbnail}" alt="${video.title}" loading="lazy">
         <div class="yt-play-overlay">
           <svg class="yt-play-btn" viewBox="0 0 68 48" width="68" height="48">
@@ -104,45 +129,34 @@
             <path d="M45 24 27 14v20" fill="#fff"/>
           </svg>
         </div>
-      </div>
+      </a>
       <div class="yt-video-meta">
         <h4 class="yt-video-title">${video.title}</h4>
         <span class="yt-video-date">${formatDate(video.published)}</span>
       </div>
     `;
 
-    // Click to replace thumbnail with embedded player
-    const thumb = card.querySelector('.yt-video-thumb');
-    thumb.addEventListener('click', () => {
-      const iframe = document.createElement('iframe');
-      iframe.src = `https://www.youtube.com/embed/${video.videoId}?autoplay=1&rel=0`;
-      iframe.allow =
-        'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-      iframe.allowFullscreen = true;
-      iframe.className = 'yt-video-iframe';
-      thumb.replaceWith(iframe);
-    });
-
     return card;
   }
 
   /**
-   * Render fallback (static embeds) if RSS fails
+   * Render fallback with hardcoded recent videos if RSS fails
    */
   function renderFallback() {
-    // Fallback: embed the channel's uploads playlist
     if (loading) loading.remove();
 
-    grid.innerHTML = `
-      <div class="yt-video-card yt-video-card--wide">
-        <iframe
-          class="yt-video-iframe"
-          src="https://www.youtube.com/embed/videoseries?list=UUDokNUV4IMPnYxKM2izUQ9w&rel=0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
-    `;
+    const fallbackVideos = [
+      { videoId: 'IWlbZiH05qk', title: 'Sophia para Crianças - Episódio 03: Aham Mukti', published: '2026-08-01', thumbnail: 'https://i.ytimg.com/vi/IWlbZiH05qk/hqdefault.jpg' },
+      { videoId: 'w4O0t7ahFME', title: 'Sophia para Crianças - Episódio 02: O Véu das Lágrimas', published: '2026-07-25', thumbnail: 'https://i.ytimg.com/vi/w4O0t7ahFME/hqdefault.jpg' },
+      { videoId: 'wS0APVVVuS0', title: 'Textos de Sophia', published: '2026-07-22', thumbnail: 'https://i.ytimg.com/vi/wS0APVVVuS0/hqdefault.jpg' },
+      { videoId: 'N7Dig3Q3Vp4', title: 'Livros de Sophia', published: '2026-07-21', thumbnail: 'https://i.ytimg.com/vi/N7Dig3Q3Vp4/hqdefault.jpg' },
+      { videoId: 'do-uBkjnjcM', title: '18 de julho de 2026', published: '2026-07-18', thumbnail: 'https://i.ytimg.com/vi/do-uBkjnjcM/hqdefault.jpg' },
+      { videoId: '0lDLCPahkv8', title: 'Episódio 15 - Você é a Chave e a Porta', published: '2026-07-18', thumbnail: 'https://i.ytimg.com/vi/0lDLCPahkv8/hqdefault.jpg' },
+    ];
+
+    fallbackVideos.forEach((video) => {
+      grid.appendChild(buildVideoCard(video));
+    });
   }
 
   /**
