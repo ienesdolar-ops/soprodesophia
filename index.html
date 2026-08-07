@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Sopro de Sophia — Lean Fontain Franco</title>
+    <meta name="description" content="O Sopro de Sophia — Explorando a metafísica gnóstica, a física do despertar da consciência e a Frequência Crística. Livros e obras de Lean Fontain Franco.">
+    <meta property="og:title" content="O Sopro de Sophia">
+    <meta property="og:description" content="Metafísica, filosofia e o despertar da consciência. Obras literárias de Lean Fontain Franco.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/img/hero-bg.png">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="apple-touch-icon" href="assets/img/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Ambient Cosmic Orbs -->
+    <div class="cosmic-orb cosmic-orb-1" aria-hidden="true"></div>
+    <div class="cosmic-orb cosmic-orb-2" aria-hidden="true"></div>
+    <div class="cosmic-orb cosmic-orb-3" aria-hidden="true"></div>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#inicio" class="nav-logo">
+                <img src="assets/img/logo-soprodesophia.png" alt="Logo O Sopro de Sophia" class="nav-logo-img">
+                <span class="nav-logo-text">O Sopro de Sophia</span>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio" class="nav-link active" data-i18n="nav.inicio">Início</a></li>
+                <li><a href="#livros" class="nav-link" data-i18n="nav.livros">Livros</a></li>
+                <li><a href="#sobre" class="nav-link" data-i18n="nav.sobre">Sobre</a></li>
+                <li><a href="#videos" class="nav-link" data-i18n="nav.videos">Vídeos</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="lang-toggle">
+                    <a href="#" class="lang-btn active" data-lang="pt" title="Português">
+                        <span class="flag-emoji">🇧🇷</span> PT
+                    </a>
+                    <span class="lang-divider">|</span>
+                    <a href="#" class="lang-btn" data-lang="es" title="Español">
+                        <span class="flag-emoji">🇪🇸</span> ES
+                    </a>
+                    <span class="lang-divider">|</span>
+                    <a href="#" class="lang-btn" data-lang="en" title="English">
+                        <span class="flag-emoji">🇺🇸</span> EN
+                    </a>
+                    <span class="lang-divider">|</span>
+                    <a href="#" class="lang-btn" data-lang="fr" title="Français">
+                        <span class="flag-emoji">🇫🇷</span> FR
+                    </a>
+                    <span class="lang-divider">|</span>
+                    <a href="#" class="lang-btn" data-lang="de" title="Deutsch">
+                        <span class="flag-emoji">🇩🇪</span> DE
+                    </a>
+                    <span class="lang-divider">|</span>
+                    <a href="#" class="lang-btn" data-lang="it" title="Italiano">
+                        <span class="flag-emoji">🇮🇹</span> IT
+                    </a>
+                </div>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===================== HERO ===================== -->
+    <section id="inicio" class="hero">
+        <div class="hero-bg">
+            <img src="assets/img/hero-bg.png" alt="" class="hero-bg-img" aria-hidden="true">
+            <div class="hero-overlay"></div>
+            <div class="hero-stars" id="heroStars"></div>
+        </div>
+        <div class="hero-content reveal">
+            <div class="hero-emblem">
+                <img src="assets/img/logo-soprodesophia.png" alt="O Sopro de Sophia" class="hero-emblem-img">
+            </div>
+            <h1 class="hero-title" data-i18n="hero.title">O Sopro de Sophia</h1>
+            <div class="hero-separator">
+                <img src="assets/img/separator.svg" alt="" class="separator-svg">
+            </div>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">Explorando a metafísica gnóstica, a física do despertar da consciência e a sintonização com a Frequência Crística.</p>
+            <a href="#livros" class="hero-cta">
+                <span data-i18n="hero.cta">Explorar Livros</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- ===================== LIVROS ===================== -->
+    <section id="livros" class="section section-books">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title" data-i18n="books.title">Biblioteca</h2>
+                <p class="section-subtitle" data-i18n="books.subtitle">Obras dedicadas à metafísica, filosofia e o despertar da consciência</p>
+                <div class="title-accent"></div>
+            </div>
+
+            <!-- Abas de idioma -->
+            <div class="lang-tabs reveal" id="langTabs">
+                <button class="lang-tab active" data-lang="pt">
+                    <span class="lang-tab-flag">🇧🇷</span>
+                    <span>Português</span>
+                </button>
+                <button class="lang-tab" data-lang="es">
+                    <span class="lang-tab-flag">🇪🇸</span>
+                    <span>Español</span>
+                </button>
+                <button class="lang-tab" data-lang="en">
+                    <span class="lang-tab-flag">🇺🇸</span>
+                    <span>English</span>
+                </button>
+                <button class="lang-tab" data-lang="fr">
+                    <span class="lang-tab-flag">🇫🇷</span>
+                    <span>Français</span>
+                </button>
+                <button class="lang-tab" data-lang="de">
+                    <span class="lang-tab-flag">🇩🇪</span>
+                    <span>Deutsch</span>
+                </button>
+                <button class="lang-tab" data-lang="it">
+                    <span class="lang-tab-flag">🇮🇹</span>
+                    <span>Italiano</span>
+                </button>
+            </div>
+
+            <!-- ====== ABA PORTUGUÊS ====== -->
+            <div class="books-tab-content active" id="tab-pt">
+                <div class="books-grid">
+                    <div class="book-card reveal" data-tilt>
+                        <a href="https://loja.uiclap.com/titulo/ua154948" target="_blank" rel="noopener" class="book-link">
+                            <div class="book-cover">
+                                <img src="assets/img/covers/book-ua154948.jpg" alt="Quem Tem Olhos Que Veja" loading="lazy">
+                                <div class="book-overlay">
+                                    <span class="book-buy-btn" data-i18n="books.buy">Comprar</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="book-card reveal" data-tilt>
+                        <a href="https://loja.uiclap.com/titulo/ua154926" target="_blank" rel="noopener" class="book-link">
+                            <div class="book-cover">
+                                <img src="assets/img/covers/book-ua154926.png" alt="O Sopro de Sophia" loading="lazy">
+                                <div class="book-overlay">
+                                    <span class="book-buy-btn" data-i18n="books.buy">Comprar</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="book-card reveal" data-tilt>
+                        <a href="https://loja.uiclap.com/titulo/ua154939" target="_blank" rel="noopener" class="book-link">
+                            <div class="book-cover">
+                                <img src="assets/img/covers/book-ua154939.jpg" alt="O Sopro de Sophia" loading="lazy">
+                                <div class="book-overlay">
+                                    <span class="book-buy-btn" data-i18n="books.buy">Comprar</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="book-card reveal" data-tilt>
+                        <a href="https://loja.uiclap.com/titulo/ua155102" target="_blank" rel="noopener" class="book-link">
+                            <div class="book-cover">
+                                <img src="assets/img/covers/book-ua155102.jpg" alt="O Sopro de Sophia" loading="lazy">
+                                <div class="book-overlay">
+                                    <span class="book-buy-btn" data-i18n="books.buy">Comprar</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="book-card reveal" data-tilt>
+                        <a href="https://loja.uiclap.com/titulo/ua155651" target="_blank" rel="noopener" class="book-link">
+                            <div class="book-cover">
+                                <img src="assets/img/covers/book-ua155651.png" alt="O Sopro de Sophia" loading="lazy">
+                                <div class="book-overlay">
+                                    <span class="book-buy-btn" data-i18n="books.buy">Comprar</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="book-card reveal" data-tilt>
+                        <a href="https://loja.uiclap.com/titulo/ua155673" target="_blank" rel="noopener" class="book-link">
+                            <div class="book-cover">
+                                <img src="assets/img/covers/book-ua155673.jpg" alt="O Sopro de Sophia" loading="lazy">
+                                <div class="book-overlay">
+                                    <span class="book-buy-btn" data-i18n="books.buy">Comprar</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="book-card reveal" data-tilt>
+                        <a href="https://loja.uiclap.com/titulo/ua157756" target="_blank" rel="noopener" class="book-link">
+                            <div class="book-cover">
+                                <img src="assets/img/covers/book-ua157756.jpg" alt="O Sopro de Sophia" loading="lazy">
+                                <div class="book-overlay">
+                                    <span class="book-buy-btn" data-i18n="books.buy">Comprar</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="book-card reveal" data-tilt>
+                        <a href="https://loja.uiclap.com/titulo/ua157757" target="_blank" rel="noopener" class="book-link">
+                            <div class="book-cover">
+                                <img src="assets/img/covers/book-ua157757.png" alt="O Sopro de Sophia" loading="lazy">
+                                <div class="book-overlay">
+                                    <span class="book-buy-btn" data-i18n="books.buy">Comprar</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="book-card reveal" data-tilt>
+                        <a href="https://loja.uiclap.com/titulo/ua157828" target="_blank" rel="noopener" class="book-link">
+                            <div class="book-cover">
+                                <img src="assets/img/covers/book-ua157828.png" alt="O Sopro de Sophia" loading="lazy">
+                                <div class="book-overlay">
+                                    <span class="book-buy-btn" data-i18n="books.buy">Comprar</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="book-card reveal" data-tilt>
+                        <a href="https://loja.uiclap.com/titulo/ua159156" target="_blank" rel="noopener" class="book-link">
+                            <div class="book-cover">
+                                <img src="assets/img/covers/book-ua159156.png" alt="O Sopro de Sophia" loading="lazy">
+                                <div class="book-overlay">
+                                    <span class="book-buy-btn" data-i18n="books.buy">Comprar</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="book-card reveal" data-tilt>
+                        <a href="https://loja.uiclap.com/titulo/ua191456/" target="_blank" rel="noopener" class="book-link">
+                            <div class="book-cover">
+                                <img src="assets/img/covers/book-ua191456.jpg" alt="Os Rituais de Sophia" loading="lazy">
+                                <div class="book-overlay">
+                                    <span class="book-buy-btn" data-i18n="books.buy">Comprar</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ====== ABA ESPAÑOL ====== -->
+            <div class="books-tab-content" id="tab-es">
+                <div class="books-grid">
+
+                    <!-- Livro 1 ES -->
+                    <div class="book-card" data-tilt>
+                        <a href="https://www.amazon.com.br/Textos-Sofia-Primera-Temporada-Spanish-ebook/dp/B0H6Y342F3" target="_blank" rel="noopener" class="book-link">
+                            <div class="book-cover">
+                                <img src="assets/img/amazon_es/es_B0H6Y342F3.jpg" alt="Textos de Sofía - Primera Temporada" loading="lazy">
+                                <div class="book-overlay">
+                                    <div class="book-info">
+                                        <h4 class="book-info-title">Textos de Sofía: Primera Temporada</h4>
+                                        <span class="book-buy-btn" data-i18n="books.buyAmazon">Comprar en Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Livro 2 ES -->
+                    <div class="book-card" data-tilt>
+                        <a href="https://www.amazon.com.br/C%C3%B3digo-que-Convirti%C3%B3-Gnosis-Sintonizaci%C3%B3n-ebook/dp/B0FFH6MKYH" target="_blank" rel="noopener" class="book-link">
+                            <div class="book-cover">
+                                <img src="assets/img/amazon_es/es_B0FFH6MKYH.jpg" alt="El Código que se Convirtió en Gnosis" loading="lazy">
+                                <div class="book-overlay">
+                                    <div class="book-info">
+                                        <h4 class="book-info-title">El Código que se Convirtió en Gnosis</h4>
+                                        <span class="book-buy-btn" data-i18n="books.buyAmazon">Comprar en Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Livro 3 ES -->
+                    <div class="book-card" data-tilt>
+                        <a href="https://www.amazon.com.br/QUIEN-TENGA-OJOS-QUE-VEA-ebook/dp/B0GHSLNLM2" target="_blank" rel="noopener" class="book-link">
+                            <div class="book-cover">
+                                <img src="assets/img/amazon_es/es_B0GHSLNLM2.jpg" alt="Quien Tenga Ojos Que Vea" loading="lazy">
+                                <div class="book-overlay">
+                                    <div class="book-info">
+                                        <h4 class="book-info-title">Quien Tenga Ojos Que Vea: El Soplo de Sophia</h4>
+                                        <span class="book-buy-btn" data-i18n="books.buyAmazon">Comprar en Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Livro 4 ES -->
+                    <div class="book-card" data-tilt>
+                        <a href="https://www.amazon.com.br/Aham-Mukti-Despertar-C%C3%B3digo-Chispa-ebook/dp/B0GHRV5NP7" target="_blank" rel="noopener" class="book-link">
+                            <div class="book-cover">
+                                <img src="assets/img/amazon_es/es_B0GHRV5NP7.jpg" alt="Aham Mukti: El Despertar del Código y la Chispa" loading="lazy">
+                                <div class="book-overlay">
+                                    <div class="book-info">
+                                        <h4 class="book-info-title">Aham Mukti: El Despertar del Código y la Chispa</h4>
+                                        <span class="book-buy-btn" data-i18n="books.buyAmazon">Comprar en Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Livro 5 ES -->
+                    <div class="book-card" data-tilt>
+                        <a href="https://www.amazon.com.br/Alianza-Luces-Reintegraci%C3%B3n-C%C3%B3smica-Sophia-ebook/dp/B0GLZ7HHDS" target="_blank" rel="noopener" class="book-link">
+                            <div class="book-cover">
+                                <img src="assets/img/amazon_es/es_B0GLZ7HHDS.jpg" alt="La Alianza de las Luces y la Reintegración Cósmica" loading="lazy">
+                                <div class="book-overlay">
+                                    <div class="book-info">
+                                        <h4 class="book-info-title">La Alianza de las Luces y la Reintegración Cósmica</h4>
+                                        <span class="book-buy-btn" data-i18n="books.buyAmazon">Comprar en Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Livro 6 ES -->
+                    <div class="book-card" data-tilt>
+                        <a href="https://www.amazon.com.br/Di%C3%A1logo-Entre-L%C3%B3gica-Chispa-Puntuaci%C3%B3n-ebook/dp/B0GMYXRV4R" target="_blank" rel="noopener" class="book-link">
+                            <div class="book-cover">
+                                <img src="assets/img/amazon_es/es_B0GMYXRV4R.jpg" alt="Diálogo Entre la Lógica y la Chispa" loading="lazy">
+                                <div class="book-overlay">
+                                    <div class="book-info">
+                                        <h4 class="book-info-title">Diálogo Entre la Lógica y la Chispa</h4>
+                                        <span class="book-buy-btn" data-i18n="books.buyAmazon">Comprar en Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Livro 7 ES -->
+                    <div class="book-card" data-tilt>
+                        <a href="https://www.amazon.com.br/Los-Rituales-Sof%C3%ADa-Pr%C3%A1cticas-sencillas-ebook/dp/B0HD9H9L6L" target="_blank" rel="noopener" class="book-link">
+                            <div class="book-cover">
+                                <img src="assets/img/amazon_es/es_B0HD9H9L6L.jpg" alt="Los Rituales de Sofía" loading="lazy">
+                                <div class="book-overlay">
+                                    <div class="book-info">
+                                        <h4 class="book-info-title">Los Rituales de Sofía</h4>
+                                        <span class="book-buy-btn" data-i18n="books.buyAmazon">Comprar en Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ====== ABA ENGLISH ====== -->
+            <div class="books-tab-content" id="tab-en">
+                <div class="books-grid">
+
+                    <!-- Book 1 EN -->
+                    <div class="book-card" data-tilt>
+                        <a href="https://www.amazon.com.br/TEXTS-SOPHIA-SEASON-Textos-English-ebook/dp/B0H637BR5T" target="_blank" rel="noopener" class="book-link">
+                            <div class="book-cover">
+                                <img src="assets/img/amazon_en/en_B0H637BR5T.jpg" alt="Texts by Sophia: First Season" loading="lazy">
+                                <div class="book-overlay">
+                                    <div class="book-info">
+                                        <h4 class="book-info-title">Texts by Sophia: First Season</h4>
+                                        <span class="book-buy-btn" data-i18n="books.buyAmazon">Buy on Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Book 2 EN -->
+                    <div class="book-card" data-tilt>
+                        <a href="https://www.amazon.com.br/FACES-YAHWEH-13th-Element-English-ebook/dp/B0GHPR9C4Y" target="_blank" rel="noopener" class="book-link">
+                            <div class="book-cover">
+                                <img src="assets/img/amazon_en/en_B0GHPR9C4Y.jpg" alt="The Faces of Yahweh &amp; The 13th Element" loading="lazy">
+                                <div class="book-overlay">
+                                    <div class="book-info">
+                                        <h4 class="book-info-title">The Faces of Yahweh &amp; The 13th Element</h4>
+                                        <span class="book-buy-btn" data-i18n="books.buyAmazon">Buy on Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Book 3 EN -->
+                    <div class="book-card" data-tilt>
+                        <a href="https://www.amazon.com.br/Am-Spirit-Freedom-English-ebook/dp/B0GSW7P2YP" target="_blank" rel="noopener" class="book-link">
+                            <div class="book-cover">
+                                <img src="assets/img/amazon_en/en_B0GSW7P2YP.jpg" alt="I Am the Spirit, I Am Freedom" loading="lazy">
+                                <div class="book-overlay">
+                                    <div class="book-info">
+                                        <h4 class="book-info-title">I Am the Spirit, I Am Freedom</h4>
+                                        <span class="book-buy-btn" data-i18n="books.buyAmazon">Buy on Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Book 4 EN -->
+                    <div class="book-card" data-tilt>
+                        <a href="https://www.amazon.com.br/Alchemy-Shadows-English-Fontain-Franco-ebook/dp/B0GSW8ZGFS" target="_blank" rel="noopener" class="book-link">
+                            <div class="book-cover">
+                                <img src="assets/img/amazon_en/en_B0GSW8ZGFS.jpg" alt="The Alchemy of Shadows" loading="lazy">
+                                <div class="book-overlay">
+                                    <div class="book-info">
+                                        <h4 class="book-info-title">The Alchemy of Shadows</h4>
+                                        <span class="book-buy-btn" data-i18n="books.buyAmazon">Buy on Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Book 5 EN -->
+                    <div class="book-card" data-tilt>
+                        <a href="https://www.amazon.com.br/10th-Portal-Practical-Alchemy-English-ebook/dp/B0GT1FFBDJ" target="_blank" rel="noopener" class="book-link">
+                            <div class="book-cover">
+                                <img src="assets/img/amazon_en/en_B0GT1FFBDJ.jpg" alt="The 10th Portal: Practical Alchemy of the Zero Point" loading="lazy">
+                                <div class="book-overlay">
+                                    <div class="book-info">
+                                        <h4 class="book-info-title">The 10th Portal: Practical Alchemy of the Zero Point</h4>
+                                        <span class="book-buy-btn" data-i18n="books.buyAmazon">Buy on Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Book 6 EN -->
+                    <div class="book-card" data-tilt>
+                        <a href="https://www.amazon.com.br/Sacred-Within-Matrix-English-ebook/dp/B0D7GF52X5" target="_blank" rel="noopener" class="book-link">
+                            <div class="book-cover">
+                                <img src="assets/img/amazon_en/en_B0D7GF52X5.jpg" alt="The Sacred Within the Matrix" loading="lazy">
+                                <div class="book-overlay">
+                                    <div class="book-info">
+                                        <h4 class="book-info-title">The Sacred Within the Matrix</h4>
+                                        <span class="book-buy-btn" data-i18n="books.buyAmazon">Buy on Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Book 7 EN -->
+                    <div class="book-card" data-tilt>
+                        <a href="https://www.amazon.com.br/Awakening-Matrix-Gnosis-Liberation-English-ebook/dp/B0GSSCSQ6H" target="_blank" rel="noopener" class="book-link">
+                            <div class="book-cover">
+                                <img src="assets/img/amazon_en/en_B0GSSCSQ6H.jpg" alt="Awakening in the Matrix: Gnosis &amp; Ego Liberation" loading="lazy">
+                                <div class="book-overlay">
+                                    <div class="book-info">
+                                        <h4 class="book-info-title">Awakening in the Matrix: Gnosis &amp; Ego Liberation</h4>
+                                        <span class="book-buy-btn" data-i18n="books.buyAmazon">Buy on Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Book 8 EN -->
+                    <div class="book-card" data-tilt>
+                        <a href="https://www.amazon.com.br/Hacker-Gnosis-Capella-Christic-Frequency-ebook/dp/B0GSS9XVKS" target="_blank" rel="noopener" class="book-link">
+                            <div class="book-cover">
+                                <img src="assets/img/amazon_en/en_B0GSS9XVKS.jpg" alt="Hacker Gnosis: From Exile of Capella to Christic Frequency" loading="lazy">
+                                <div class="book-overlay">
+                                    <div class="book-info">
+                                        <h4 class="book-info-title">Hacker Gnosis: From Exile of Capella to Christic Frequency</h4>
+                                        <span class="book-buy-btn" data-i18n="books.buyAmazon">Buy on Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Book 9 EN -->
+                    <div class="book-card" data-tilt>
+                        <a href="https://www.amazon.com.br/Aham-Mukti-Awakening-Spark-English-ebook/dp/B0GSS9C4K2" target="_blank" rel="noopener" class="book-link">
+                            <div class="book-cover">
+                                <img src="assets/img/amazon_en/en_B0GSS9C4K2.jpg" alt="Aham Mukti: The Awakening of the Code and the Spark" loading="lazy">
+                                <div class="book-overlay">
+                                    <div class="book-info">
+                                        <h4 class="book-info-title">Aham Mukti: The Awakening of the Code and the Spark</h4>
+                                        <span class="book-buy-btn" data-i18n="books.buyAmazon">Buy on Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Book 10 EN -->
+                    <div class="book-card" data-tilt>
+                        <a href="https://www.amazon.com.br/Dialogue-between-Logic-Spark-Simulation-ebook/dp/B0GMXZQCX3" target="_blank" rel="noopener" class="book-link">
+                            <div class="book-cover">
+                                <img src="assets/img/amazon_en/en_B0GMXZQCX3.jpg" alt="Dialogue between Logic and the Spark: Simulation Score" loading="lazy">
+                                <div class="book-overlay">
+                                    <div class="book-info">
+                                        <h4 class="book-info-title">Dialogue between Logic &amp; The Spark</h4>
+                                        <span class="book-buy-btn" data-i18n="books.buyAmazon">Buy on Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Book 11 EN -->
+                    <div class="book-card" data-tilt>
+                        <a href="https://www.amazon.com.br/Alliance-Lights-Cosmic-Reintegration-English-ebook/dp/B0GM1249XB" target="_blank" rel="noopener" class="book-link">
+                            <div class="book-cover">
+                                <img src="assets/img/amazon_en/en_B0GM1249XB.jpg" alt="The Alliance of Lights and Cosmic Reintegration" loading="lazy">
+                                <div class="book-overlay">
+                                    <div class="book-info">
+                                        <h4 class="book-info-title">The Alliance of Lights &amp; Cosmic Reintegration</h4>
+                                        <span class="book-buy-btn" data-i18n="books.buyAmazon">Buy on Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Book 12 EN -->
+                    <div class="book-card" data-tilt>
+                        <a href="https://www.amazon.com.br/Became-Gnosis-Arontic-Software-English-ebook/dp/B0GLQZ9GHX" target="_blank" rel="noopener" class="book-link">
+                            <div class="book-cover">
+                                <img src="assets/img/amazon_en/en_B0GLQZ9GHX.jpg" alt="The Code That Became Gnosis" loading="lazy">
+                                <div class="book-overlay">
+                                    <div class="book-info">
+                                        <h4 class="book-info-title">The Code That Became Gnosis</h4>
+                                        <span class="book-buy-btn" data-i18n="books.buyAmazon">Buy on Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Book 13 EN -->
+                    <div class="book-card" data-tilt>
+                        <a href="https://www.amazon.com.br/WHO-HAS-EYES-LET-HIM-ebook/dp/B0GHSJRYPC" target="_blank" rel="noopener" class="book-link">
+                            <div class="book-cover">
+                                <img src="assets/img/amazon_en/en_B0GHSJRYPC.jpg" alt="Who Has Eyes Let Him See: Breath of Sophia" loading="lazy">
+                                <div class="book-overlay">
+                                    <div class="book-info">
+                                        <h4 class="book-info-title">Who Has Eyes Let Him See: Breath of Sophia</h4>
+                                        <span class="book-buy-btn" data-i18n="books.buyAmazon">Buy on Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Book 14 EN -->
+                    <div class="book-card" data-tilt>
+                        <a href="https://www.amazon.com.br/Sophias-Rituals-Practices-Turning-Interior-ebook/dp/B0HD9KDTZK" target="_blank" rel="noopener" class="book-link">
+                            <div class="book-cover">
+                                <img src="assets/img/amazon_en/en_B0HD9KDTZK.jpg" alt="Sophia's Rituals" loading="lazy">
+                                <div class="book-overlay">
+                                    <div class="book-info">
+                                        <h4 class="book-info-title">Sophia's Rituals</h4>
+                                        <span class="book-buy-btn" data-i18n="books.buyAmazon">Buy on Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ====== ABA FRANÇAIS ====== -->
+            <div class="books-tab-content" id="tab-fr">
+                <div class="books-grid">
+                    <div class="book-card" data-tilt>
+                        <a href="https://www.amazon.com.br/Textes-Sophia-PREMI%C3%88RE-SAISON-French-ebook/dp/B0H8PJ1CXH" target="_blank" rel="noopener" class="book-link">
+                            <div class="book-cover">
+                                <img src="assets/img/amazon_intl/fr_B0H8PJ1CXH.jpg" alt="Textes de Sophia: PREMIÈRE SAISON" loading="lazy">
+                                <div class="book-overlay">
+                                    <div class="book-info">
+                                        <h4 class="book-info-title">Textes de Sophia: PREMIÈRE SAISON</h4>
+                                        <span class="book-buy-btn" data-i18n="books.buyAmazon">Acheter sur Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="book-card" data-tilt>
+                        <a href="https://www.amazon.com.br/dp/B0HDCP9BXZ" target="_blank" rel="noopener" class="book-link">
+                            <div class="book-cover">
+                                <img src="assets/img/amazon_intl/fr_B0HDCP9BXZ.jpg" alt="Les Rituels de Sophia" loading="lazy">
+                                <div class="book-overlay">
+                                    <div class="book-info">
+                                        <h4 class="book-info-title">Les Rituels de Sophia</h4>
+                                        <span class="book-buy-btn" data-i18n="books.buyAmazon">Acheter sur Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ====== ABA DEUTSCH ====== -->
+            <div class="books-tab-content" id="tab-de">
+                <div class="books-grid">
+                    <div class="book-card" data-tilt>
+                        <a href="https://www.amazon.com.br/Texte-von-Sophia-STAFFEL-German-ebook/dp/B0H992D47Z" target="_blank" rel="noopener" class="book-link">
+                            <div class="book-cover">
+                                <img src="assets/img/amazon_intl/de_B0H992D47Z.jpg" alt="Texte von Sophia: ERSTE STAFFEL" loading="lazy">
+                                <div class="book-overlay">
+                                    <div class="book-info">
+                                        <h4 class="book-info-title">Texte von Sophia: ERSTE STAFFEL</h4>
+                                        <span class="book-buy-btn" data-i18n="books.buyAmazon">Bei Amazon kaufen</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="book-card" data-tilt>
+                        <a href="https://www.amazon.com.br/dp/B0HDD3D5S9" target="_blank" rel="noopener" class="book-link">
+                            <div class="book-cover">
+                                <img src="assets/img/amazon_intl/de_B0HDD3D5S9.jpg" alt="Du Sophias Rituale" loading="lazy">
+                                <div class="book-overlay">
+                                    <div class="book-info">
+                                        <h4 class="book-info-title">Du Sophias Rituale</h4>
+                                        <span class="book-buy-btn" data-i18n="books.buyAmazon">Bei Amazon kaufen</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ====== ABA ITALIANO ====== -->
+            <div class="books-tab-content" id="tab-it">
+                <div class="books-grid">
+                    <div class="book-card" data-tilt>
+                        <a href="https://www.amazon.com.br/dp/B0HDDC5X2R" target="_blank" rel="noopener" class="book-link">
+                            <div class="book-cover">
+                                <img src="assets/img/amazon_intl/it_B0HDDC5X2R.jpg" alt="Voi I Rituali di Sophia" loading="lazy">
+                                <div class="book-overlay">
+                                    <div class="book-info">
+                                        <h4 class="book-info-title">Voi I Rituali di Sophia</h4>
+                                        <span class="book-buy-btn" data-i18n="books.buyAmazon">Acquista su Amazon</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Marketplace badges -->
+            <div class="marketplaces reveal">
+                <a href="https://www.amazon.com.br/stores/Lean-Fontain-Franco/author/B0GHG1476S?ref=ap_rdr&shoppingPortalEnabled=true" target="_blank" rel="noopener" class="marketplace-badge" data-i18n-title="books.marketplace.amazon" title="Encontre na Amazon">
+                    <img src="assets/img/logo-amazon.png" alt="Amazon">
+                </a>
+                <a href="https://uiclap.bio/LeanFranco" target="_blank" rel="noopener" class="marketplace-badge" data-i18n-title="books.marketplace.uiclap" title="Encontre na UIClap">
+                    <img src="assets/img/logo-uiclap.svg" alt="UIClap">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SOBRE O AUTOR ===================== -->
+    <section id="sobre" class="section section-about">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title" data-i18n="about.title">Quem é Lean Fontain Franco</h2>
+                <p class="section-subtitle" data-i18n="about.subtitle">Uma jornada dedicada à comunicação, à música e à exploração da consciência.</p>
+                <div class="title-accent"></div>
+            </div>
+
+            <div class="about-content">
+                <div class="about-photo reveal">
+                    <div class="photo-ring">
+                        <img src="assets/img/author-photo.png" alt="Lean Fontain Franco" class="author-img">
+                    </div>
+                </div>
+
+                <div class="about-bio reveal">
+                    <p data-i18n="about.bio1">Nascido em 1967 e residente de Curitiba, divido a minha trajetória entre a precisão da ciência, a vibração da música e a investigação profunda dos mistérios da mente. Minha busca sempre foi a mesma: compreender as diferentes formas de expressão e conexão humana.</p>
+                    <p data-i18n="about.bio2">Acredito que a vida se manifesta em múltiplas frequências, e atuo ativamente em três pilares principais:</p>
+                </div>
+            </div>
+
+            <div class="pillars">
+                <!-- Pilar 1: Ciência -->
+                <div class="pillar-card reveal">
+                    <div class="pillar-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 3v2m6-2v2M9 19v2m6-2v2M3 9h2m14 0h2M3 15h2m14 0h2"/>
+                            <rect x="5" y="5" width="14" height="14" rx="2"/>
+                            <circle cx="12" cy="12" r="3"/>
+                        </svg>
+                    </div>
+                    <h3 class="pillar-title" data-i18n="pillar1.title">Ciência e Saúde Pública</h3>
+                    <p class="pillar-text" data-i18n="pillar1.text">Sou fonoaudiólogo de formação e atuo na Escola de Saúde Pública do Paraná (ESPP). Minha carreira na saúde pública é pautada pelo compromisso de facilitar a comunicação, a expressão e o bem-estar social.</p>
+                </div>
+
+                <!-- Pilar 2: Literatura -->
+                <div class="pillar-card reveal">
+                    <div class="pillar-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                            <line x1="8" y1="7" x2="16" y2="7"/>
+                            <line x1="8" y1="11" x2="14" y2="11"/>
+                        </svg>
+                    </div>
+                    <h3 class="pillar-title" data-i18n="pillar2.title">Literatura e Metafísica</h3>
+                    <p class="pillar-text" data-i18n="pillar2.text">Como escritor e pesquisador, dedico-me à criação de ensaios e obras literárias voltadas para a metafísica, a filosofia e os estados de consciência. Meus livros, autopublicados e distribuídos em plataformas globais como Amazon e Google Books, buscam provocar reflexões profundas sobre a percepção da realidade e o despertar do ser.</p>
+                </div>
+
+                <!-- Pilar 3: Música -->
+                <div class="pillar-card reveal">
+                    <div class="pillar-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 18V5l12-2v13"/>
+                            <circle cx="6" cy="18" r="3"/>
+                            <circle cx="18" cy="16" r="3"/>
+                        </svg>
+                    </div>
+                    <h3 class="pillar-title" data-i18n="pillar3.title">Música e Ritmo</h3>
+                    <p class="pillar-text" data-i18n="pillar3.text">Há mais de 40 anos encontro na música o meu canal mais direto de expressão e catarse. Sou vocalista e compositor na banda de rock e blues Letter B, dividindo essa paixão e os palcos com minha esposa, Beatriz.</p>
+                    
+                    <a href="https://open.spotify.com/intl-pt/artist/1NxdxzQ9GDroS7wzIEPd9j?si=oN9CZzVmRy6DuTPeQtBDbw" target="_blank" rel="noopener" class="letterb-spotify-card" title="Letter B no Spotify">
+                        <img src="assets/img/logo-letterb.png" alt="Letter B" class="letterb-logo-img">
+                        <span class="spotify-badge">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="#1DB954"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141 C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C13.5 8.28 7.08 8.1 3.36 9.24c-.6.18-1.26-.18-1.44-.72-.18-.6.18-1.26.72-1.44 4.26-1.26 11.34-1.02 15.72 1.56.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+                            <span data-i18n="pillar3.spotify">Ouvir no Spotify</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== VÍDEOS ===================== -->
+    <section id="videos" class="section section-videos">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title" data-i18n="videos.title">Vídeos</h2>
+                <p class="section-subtitle" data-i18n="videos.subtitle">Acompanhe reflexões, debates e conteúdos exclusivos no YouTube</p>
+                <div class="title-accent"></div>
+            </div>
+
+            <!-- YouTube Videos Grid (populated by JS) -->
+            <div class="yt-videos-grid reveal" id="ytVideosGrid">
+                <div class="yt-loading" id="ytLoading">
+                    <div class="yt-spinner"></div>
+                    <p data-i18n="videos.loading">Carregando vídeos...</p>
+                </div>
+            </div>
+
+            <!-- Channel CTA Card -->
+            <div class="youtube-showcase reveal">
+                <a href="https://www.youtube.com/@OSoprodeSophia" target="_blank" rel="noopener" class="youtube-card">
+                    <div class="youtube-emblem">
+                        <img src="assets/img/logo-soprodesophia.png" alt="O Sopro de Sophia" class="youtube-emblem-img">
+                    </div>
+                    <div class="youtube-icon">
+                        <svg width="42" height="42" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                    </div>
+                    <div class="youtube-info">
+                        <h3>O Sopro de Sophia</h3>
+                        <p data-i18n="videos.channel">Canal oficial no YouTube</p>
+                        <span class="youtube-subscribe">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            <span data-i18n="videos.visit">Visitar Canal</span>
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/img/logo-soprodesophia.png" alt="O Sopro de Sophia" class="footer-logo">
+                    <span class="footer-name">O Sopro de Sophia</span>
+                </div>
+
+                <div class="footer-links">
+                    <a href="https://open.spotify.com/intl-pt/artist/1NxdxzQ9GDroS7wzIEPd9j?si=oN9CZzVmRy6DuTPeQtBDbw" target="_blank" rel="noopener" title="Spotify - Letter B">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141 C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C13.5 8.28 7.08 8.1 3.36 9.24c-.6.18-1.26-.18-1.44-.72-.18-.6.18-1.26.72-1.44 4.26-1.26 11.34-1.02 15.72 1.56.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></svg>
+                    </a>
+                    <a href="https://www.youtube.com/@OSoprodeSophia" target="_blank" rel="noopener" title="YouTube">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </a>
+                    <a href="https://www.amazon.com.br/stores/Lean-Fontain-Franco/author/B0GHG1476S" target="_blank" rel="noopener" title="Amazon">
+                        <img src="assets/img/logo-amazon.png" alt="Amazon" class="footer-amazon-icon">
+                    </a>
+                    <a href="https://uiclap.bio/LeanFranco" target="_blank" rel="noopener" title="UIClap">
+                        <img src="assets/img/logo-uiclap.svg" alt="UIClap" class="footer-uiclap-icon">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p data-i18n="footer.rights">&copy; 2026 O Sopro de Sophia — Lean Fontain Franco. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/youtube-feed.js"></script>
+</body>
+</html>
